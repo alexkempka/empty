@@ -337,8 +337,35 @@ strong { font-weight: 600; }
   .check-illu { justify-self: center; max-width: 320px; }
 }
 
-.group-title { font-family: var(--mono); font-size: .9375rem; font-weight: 500; letter-spacing: .04em; color: var(--navy); display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
-.group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+/* Themen-Kacheln mit Häkchenliste (Startseite, Leistungen) */
+.topic-card { display: flex; flex-direction: column; }
+.topic-card h3 { margin-bottom: .9rem; }
+.ticks { list-style: none; margin: 0 0 1.25rem; padding: 0; flex-grow: 1; }
+.ticks li { position: relative; padding: .45rem 0 .45rem 1.6rem; color: var(--muted); font-size: 1rem; line-height: 1.45; border-top: 1px solid var(--line); }
+.ticks li:first-child { border-top: 0; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: .9rem; width: 9px; height: 5px; border-left: 2px solid var(--cyan); border-bottom: 2px solid var(--cyan); transform: rotate(-45deg); }
+.topic-card .more { margin-top: auto; }
+/* Ganze Kachel klickbar: der Link spannt sich über die Karte */
+.topic-card .more::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.topic-card:has(.more) { cursor: pointer; }
+.topic-card:has(.more:focus-visible) { outline: 3px solid var(--cyan); outline-offset: 3px; }
+.topic-card .more:focus-visible { outline: none; }
+
+/* Leistungen: Themen im Detail */
+.topic-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 1.5rem clamp(2rem, 5vw, 4rem); padding: 2.5rem 0; border-top: 1px solid var(--line); scroll-margin-top: 1rem; }
+.topic-detail:first-of-type { margin-top: 2rem; }
+.topic-detail__head .icon { width: 28px; height: 28px; padding: 11px; box-sizing: content-box; border-radius: 10px; color: var(--action); background: linear-gradient(135deg, rgba(79, 209, 232, .22), rgba(0, 121, 154, .12)); margin-bottom: 1rem; }
+.topic-detail__head { align-self: start; position: sticky; top: 1.5rem; }
+.topic-detail__head h3 { font-size: 1.5rem; }
+.topic-detail__head p { color: var(--muted); }
+.topic-detail:target .topic-detail__head h3 { color: var(--action); }
+.topic-list { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.topic-list > div { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.25rem; }
+.topic-list dt { font-weight: 600; margin-bottom: .35rem; color: var(--navy); }
+.topic-list dd { margin: 0; color: var(--muted); font-size: 1rem; }
+@media (max-width: 960px) { .topic-detail { grid-template-columns: 1fr; } .topic-detail__head { position: static; } }
+@media (max-width: 640px) { .topic-list { grid-template-columns: 1fr; } }
 
 /* Sanftes Einblenden beim Scrollen (nur mit JavaScript und ohne reduzierte Bewegung) */
 @media (prefers-reduced-motion: no-preference) {
