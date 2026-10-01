@@ -199,6 +199,9 @@ def build():
             out_dir.mkdir(parents=True, exist_ok=True)
             page = strip_comments(layout(lang, key, meta, body)).replace("{VERSION}", VERSION)
             page = page.replace("{STAND_DE}", STAND_DE).replace("{STAND_EN}", STAND_EN)
+            # {SVG:name} bettet src/partials/name.svg direkt ein (für per CSS animierte Grafiken)
+            page = re.sub(r"\{SVG:([a-z0-9-]+)\}",
+                          lambda m: (SRC / "partials" / f"{m.group(1)}.svg").read_text(encoding="utf-8").strip(), page)
             page = re.sub(r"\n{2,}", "\n", page)
             (out_dir / ("index.php" if meta.get("php") else "index.html")).write_text(page, encoding="utf-8")
         if PAGES[key][3]:

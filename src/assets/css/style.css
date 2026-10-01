@@ -278,7 +278,19 @@ strong { font-weight: 600; }
 .hero .wrap { position: relative; padding-bottom: clamp(5.5rem, 10vw, 8rem); }
 
 /* Für wen: Illustration und Situationen */
-.who-illu { display: block; width: 100%; max-width: 520px; margin-top: 2rem; }
+.who-illu { display: block; width: 100%; max-width: 520px; height: auto; margin-top: 2rem; }
+/* IT-Landschaft: Datenpunkte wandern auf den Speichen von außen zur Mitte */
+.it-landschaft .il-flow { fill: none; stroke: var(--cyan-light); stroke-width: 4.5; stroke-linecap: round; stroke-dasharray: 0 24; opacity: .9; }
+.it-landschaft .il-halo { transform-box: fill-box; transform-origin: center; }
+@media (prefers-reduced-motion: no-preference) {
+  .it-landschaft .il-flow { animation: il-flow 1.5s linear infinite; }
+  .it-landschaft .il-flow2 { animation-delay: -.25s; } .it-landschaft .il-flow3 { animation-delay: -.5s; }
+  .it-landschaft .il-flow4 { animation-delay: -.75s; } .it-landschaft .il-flow5 { animation-delay: -1s; }
+  .it-landschaft .il-flow6 { animation-delay: -1.25s; }
+  .it-landschaft .il-halo { animation: il-halo 3s ease-in-out infinite; }
+}
+@keyframes il-flow { to { stroke-dashoffset: -24; } }
+@keyframes il-halo { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.12); opacity: .55; } }
 .situations { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: .75rem; }
 .situations li { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--cyan); border-radius: 8px; font-weight: 500; color: var(--navy); transition: transform .2s ease, box-shadow .2s ease; }
 .situations li:hover { transform: translateX(4px); box-shadow: 0 8px 22px -14px rgba(1, 30, 60, .45); }
