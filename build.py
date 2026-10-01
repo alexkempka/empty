@@ -176,6 +176,9 @@ def asset_version():
 
 VERSION = asset_version()
 RELEASE = "--release" in sys.argv
+_MONATE = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+STAND_DE = f"{_MONATE[date.today().month - 1]} {date.today().year}"   # „Stand“ der Datenschutzerklärung = Monat des Builds
+STAND_EN = date.today().strftime("%B %Y")
 
 
 def build():
@@ -195,6 +198,7 @@ def build():
             out_dir = DIST / url(lang, key).strip("/")
             out_dir.mkdir(parents=True, exist_ok=True)
             page = strip_comments(layout(lang, key, meta, body)).replace("{VERSION}", VERSION)
+            page = page.replace("{STAND_DE}", STAND_DE).replace("{STAND_EN}", STAND_EN)
             page = re.sub(r"\n{2,}", "\n", page)
             (out_dir / ("index.php" if meta.get("php") else "index.html")).write_text(page, encoding="utf-8")
         if PAGES[key][3]:

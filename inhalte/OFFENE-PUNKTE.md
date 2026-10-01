@@ -13,11 +13,9 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 
 | # | Punkt |
 |---|---|
-| 5 | Speicherdauer der Server-Logdateien bei IONOS Webhosting Pro → in Datenschutzerklärung eintragen |
 | 6 | Zeigen `itcorenet.de`, `www.itcorenet.de` und `itcorenet.com` (ohne www) auf denselben Webspace? Nur dann greifen die Weiterleitungen aus der `.htaccess` ohne DNS-Änderung |
 | 7 | PHP-Version des Webspace (empfohlen: 8.1 oder neuer; lokal getestet mit 8.3) |
 | 8 | Test-Strategie vor dem Umschalten festlegen (die Seite nutzt Pfade ab Domain-Wurzel; ein Test in einem Unterordner reicht dafür nicht, eine Test-Subdomain wäre eine DNS-Ergänzung und braucht Freigabe) |
-| 9 | Datum „Stand“ der Datenschutzerklärung beim Veröffentlichen eintragen |
 
 ## Nicht geprüft (Werkzeug in der Entwicklungsumgebung nicht verfügbar)
 
@@ -30,6 +28,9 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen lassen.
 
 ## Erledigt
+
+- Speicherdauer der IONOS-Logdateien: max. 7 Tage – laut IONOS Anhang 1 zur AVV (Version 2.0, Stand 06/2023), Abschnitt 4 „Hosting Produkte“
+- „Stand“ der Datenschutzerklärung setzt build.py automatisch (Monat des Builds)
 
 - AV-Vertrag mit IONOS abgeschlossen (laut Inhaber, 01.10.2026) – in Datenschutzerklärung DE/EN eingetragen
 - SFTP-Benutzer bei IONOS angelegt (laut Inhaber)
