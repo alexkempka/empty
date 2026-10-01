@@ -16,9 +16,29 @@ Entscheidungen des Inhabers.
 
 - Einzelunternehmen (Gewerbe), Inhaber Alessandro Kempka, keine Angestellten
 - Zielgruppe: Unternehmen und Privatkunden
-- Kein Preisbereich; Leistungen werden individuell angeboten
+- Nicht im Handelsregister eingetragen (kein e. K.) – keine Registerangabe im Impressum
+- USt-IdNr. DE202184042
+- Keine Preise auf der Website; die Preisgestaltung bleibt bewusst offen
+  („Jedes Vorhaben ist anders. Sie erhalten ein individuelles Angebot …“)
 - Keine konkrete Jahreszahl zur Berufserfahrung
+- Website und Projektsprachen: nur Deutsch und Englisch
 - Texte suggerieren kein Team und keine Firmengröße
+- Managed Services nur allgemein: „Laufende Betreuung der IT nach individuell vereinbartem
+  Umfang“ – keine konkreten Zusagen (z. B. 24/7, Helpdesk, Patch-Management, Monitoring), solange
+  nicht ausdrücklich bestätigt
+
+## Verbraucherschlichtung (Prüfergebnis, keine Rechtsberatung)
+
+- **Website:** Kein Hinweis nötig. Die allgemeine Informationspflicht nach § 36 VSBG gilt nicht für
+  Unternehmer mit höchstens 10 Beschäftigten (§ 36 Abs. 3 VSBG); ITCoreNet hat keine Angestellten.
+  Ein freiwilliger Standardsatz wird bewusst nicht aufgenommen.
+- **EU-Plattform zur Online-Streitbeilegung:** Die Plattform wurde am 20.07.2025 eingestellt
+  (Verordnung (EU) 2024/3228); ein Link ist nicht mehr nötig.
+- **Wichtig für den Geschäftsalltag:** Kommt es mit einem Privatkunden zu einem Streit, der nicht
+  beigelegt werden kann, gilt § 37 VSBG unabhängig von der Betriebsgröße: Dann muss der Kunde in
+  Textform auf eine zuständige Verbraucherschlichtungsstelle hingewiesen werden, mit der Angabe, ob
+  ITCoreNet zur Teilnahme bereit ist. Das betrifft nicht die Website.
+- Sobald ITCoreNet mehr als 10 Beschäftigte hat, neu prüfen.
 
 ## Positionierung
 

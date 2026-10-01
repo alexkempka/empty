@@ -27,14 +27,7 @@ Contact form: [itcorenet.com/en/contact/](/en/contact/)
 
 VAT identification number pursuant to Section 27a of the German VAT Act: DE202184042
 
-<!-- [OFFEN] See German version: commercial register details only if registered (e. K.). -->
-
-## Consumer dispute resolution
-
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Same wording as the German version. -->
-
-ITCoreNet is neither willing nor obliged to participate in dispute resolution proceedings before a
-consumer arbitration board.
+<!-- No consumer dispute resolution notice – see German version and KONZEPT.md. -->
 
 ## Image credits
 

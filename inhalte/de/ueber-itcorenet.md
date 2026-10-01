@@ -29,7 +29,4 @@ in den Bereichen Infrastruktur, Migrationen, Hardware-Standardisierung und IT-Ma
 - Konzept und Umsetzung in einer Hand
 - Projekte auf Deutsch und Englisch
 
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Italienisch als weitere Projektsprache
-(stand auf der Website von 2017). -->
-
 [Kontakt aufnehmen](/de/kontakt/)

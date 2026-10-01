@@ -37,8 +37,8 @@ them hands-on.
 
 ## Hardware Procurement & Lifecycle {#hardware}
 
-Standardised devices reduce the effort for setup, support and replacement. ITCoreNet helps with the
-selection, procurement and management of your hardware.
+Standardised devices simplify setup, support and replacement. ITCoreNet helps with the selection,
+procurement and management of your hardware.
 
 - Standards for workstations and print solutions
 - Procurement of hardware and software
@@ -47,17 +47,12 @@ selection, procurement and management of your hardware.
 
 ## Managed Services {#managed-services}
 
-Once the project is finished, operations begin. If required, ITCoreNet provides ongoing support for
-your IT. The tasks and scope are agreed individually – to match the size and requirements of your
-IT.
-
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Examples (helpdesk, central management, patch
-management, out-of-hours support) only after confirmation. -->
+Once the project is finished, operations begin. If required, ITCoreNet takes on the ongoing
+support of your IT – with the scope agreed individually.
 
 ## Individual offer
 
-Every project is different, so there are no fixed price lists: you receive an offer based on
-scope, requirements and the service model you need – as a project, on a time-and-materials basis
-or as an ongoing service.
+Every project is different. You receive an individual offer based on scope, requirements and the
+service model you need.
 
 [Send an enquiry](/en/contact/)

@@ -25,18 +25,9 @@ Kontaktformular: [itcorenet.com/de/kontakt/](/de/kontakt/)
 
 Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE202184042
 
-<!-- [OFFEN] Falls ITCoreNet im Handelsregister eingetragen ist (e. K.), müssen Registergericht
-und Registernummer ergänzt werden. Laut Inhaber: Gewerbe/Einzelunternehmen; ohne Eintragung
-entfällt diese Angabe. -->
-
-## Verbraucherstreitbeilegung
-
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Bei weniger als 11 Beschäftigten besteht keine
-Pflicht zu dieser Angabe (§ 36 VSBG). Sie ist aber üblich und schafft Klarheit gegenüber
-Privatkunden. Vorschlag: -->
-
-ITCoreNet ist nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer
-Verbraucherschlichtungsstelle teilzunehmen.
+<!-- Kein Hinweis zur Verbraucherschlichtung: keine Pflicht nach § 36 Abs. 3 VSBG (höchstens
+10 Beschäftigte); Link zur EU-OS-Plattform entfällt seit deren Einstellung am 20.07.2025.
+Siehe KONZEPT.md. -->
 
 ## Bildnachweis
 

@@ -37,8 +37,8 @@ praktisch um.
 
 ## Hardware-Beschaffung & Lifecycle {#hardware}
 
-Einheitliche Geräte sparen Aufwand bei Einrichtung, Support und Ersatz. ITCoreNet unterstützt bei
-der Auswahl, Beschaffung und Betreuung Ihrer Hardware.
+Einheitliche Geräte vereinfachen Einrichtung, Support und Ersatz. ITCoreNet unterstützt bei der
+Auswahl, Beschaffung und Betreuung Ihrer Hardware.
 
 - Standards für Arbeitsplatzrechner und Drucklösungen
 - Beschaffung von Hard- und Software
@@ -47,18 +47,12 @@ der Auswahl, Beschaffung und Betreuung Ihrer Hardware.
 
 ## Managed Services {#managed-services}
 
-Nach dem Projekt beginnt der Betrieb. ITCoreNet betreut Ihre IT auf Wunsch laufend. Welche Aufgaben
-dazugehören und in welchem Umfang, wird individuell vereinbart – passend zu Größe und Anforderungen
-Ihrer IT.
-
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Beispiele für Managed-Services-Aufgaben
-(z. B. Helpdesk, zentrale Verwaltung, Patch-Management, Support außerhalb der Geschäftszeiten)
-stammen aus der Website von 2017 und werden nur nach Bestätigung genannt. -->
+Nach dem Projekt beginnt der Betrieb. Auf Wunsch übernimmt ITCoreNet die laufende Betreuung Ihrer
+IT – nach individuell vereinbartem Umfang.
 
 ## Individuelles Angebot
 
-Jedes Vorhaben ist anders. Deshalb gibt es keine pauschalen Preislisten: Sie erhalten ein Angebot,
-das sich nach Umfang, Anforderungen und gewünschtem Servicemodell richtet – als Projekt, nach
-Aufwand oder als laufender Service.
+Jedes Vorhaben ist anders. Sie erhalten ein individuelles Angebot, das sich nach Umfang,
+Anforderungen und gewünschtem Servicemodell richtet.
 
 [Anfrage senden](/de/kontakt/)

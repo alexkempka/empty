@@ -64,8 +64,8 @@ Standardisierte Arbeitsplätze, Beschaffung und Begleitung über den gesamten Le
 [Mehr erfahren](/de/leistungen/#hardware)
 
 ### Managed Services
-Laufende Betreuung Ihrer IT im vereinbarten Umfang – damit der Betrieb nach dem Projekt
-verlässlich weiterläuft. [Mehr erfahren](/de/leistungen/#managed-services)
+Laufende Betreuung Ihrer IT nach individuell vereinbartem Umfang.
+[Mehr erfahren](/de/leistungen/#managed-services)
 
 ## Arbeitsweise
 
@@ -89,7 +89,7 @@ ITCoreNet.*
 
 ## Ihr Vorhaben besprechen
 
-Jedes Vorhaben ist anders. Sie erhalten ein Angebot, das sich nach Umfang, Anforderungen und
-gewünschtem Servicemodell richtet – als Projekt, nach Aufwand oder als laufender Service.
+Jedes Vorhaben ist anders. Sie erhalten ein individuelles Angebot, das sich nach Umfang,
+Anforderungen und gewünschtem Servicemodell richtet.
 
 [Anfrage senden](/de/kontakt/) · support@itcorenet.com

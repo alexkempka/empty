@@ -55,10 +55,10 @@ Interesse liegt im sicheren und fehlerfreien Betrieb der Website.
 <!-- [OFFEN] Speicherdauer bzw. Anonymisierung der Logdateien bei IONOS Webhosting Pro prüfen und
 hier eintragen. -->
 
-<!-- [OFFEN] Bestätigen, dass mit IONOS ein Vertrag zur Auftragsverarbeitung (Art. 28 DSGVO)
-abgeschlossen ist (im IONOS-Kundenbereich unter Datenschutz abrufbar). -->
-
-Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.
+<!-- [OFFEN – Datenschutzprüfung] Ob mit IONOS ein Auftragsverarbeitungsvertrag (Art. 28 DSGVO)
+besteht, ist unbekannt. Vor Veröffentlichung klären (im IONOS-Kundenbereich abschließbar); erst
+dann folgenden Satz aufnehmen: „Mit IONOS besteht ein Vertrag zur Auftragsverarbeitung nach
+Art. 28 DSGVO.“ -->
 
 ## 4. Kontaktformular
 

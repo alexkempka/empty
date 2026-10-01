@@ -64,8 +64,8 @@ Standardised workstations, procurement and support throughout the entire lifecyc
 [Learn more](/en/services/#hardware)
 
 ### Managed Services
-Ongoing support for your IT within an agreed scope – so that operations continue reliably after
-the project. [Learn more](/en/services/#managed-services)
+Ongoing support for your IT, with the scope agreed individually.
+[Learn more](/en/services/#managed-services)
 
 ## How ITCoreNet works
 
@@ -87,7 +87,7 @@ integration after mergers and the standardisation of client hardware.
 
 ## Discuss your project
 
-Every project is different. You receive an offer based on scope, requirements and the service
-model you need – as a project, on a time-and-materials basis or as an ongoing service.
+Every project is different. You receive an individual offer based on scope, requirements and the
+service model you need.
 
 [Send an enquiry](/en/contact/) · support@itcorenet.com

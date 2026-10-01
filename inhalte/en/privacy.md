@@ -55,7 +55,9 @@ error-free operation of the website.
 
 <!-- [OFFEN] Retention period / anonymisation of log files at IONOS – see German version. -->
 
-A data processing agreement pursuant to Art. 28 GDPR has been concluded with IONOS.
+<!-- [OFFEN – privacy review] Data processing agreement with IONOS unknown – see German version.
+Only then add: "A data processing agreement pursuant to Art. 28 GDPR has been concluded with
+IONOS." -->
 
 ## 4. Contact form
 

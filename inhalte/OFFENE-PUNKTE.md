@@ -1,25 +1,22 @@
 # Offene Punkte
 
-Stand: 01.10.2026. Nur Punkte, die vor der Veröffentlichung geklärt sein müssen.
+Stand: 01.10.2026. Nur Punkte, die vor der Veröffentlichung geklärt sein müssen. Keiner davon
+blockiert die Texte.
 
-## Vom Inhaber zu bestätigen (kurz: ja/nein reicht)
+## Für die Datenschutzprüfung (vor Veröffentlichung)
 
 | # | Punkt | Datei |
 |---|---|---|
-| 1 | Ist ITCoreNet im Handelsregister eingetragen (e. K.)? Wenn nein, entfällt die Angabe. | `de/impressum.md` |
-| 2 | Hinweis zur Verbraucherstreitbeilegung („nicht bereit und nicht verpflichtet“) aufnehmen? | `de/impressum.md` |
-| 3 | Ist mit IONOS ein Vertrag zur Auftragsverarbeitung abgeschlossen? (IONOS-Kundenbereich → Datenschutz) | `de/datenschutz.md` |
-| 4 | Optional: Beispiele für Managed-Services-Aufgaben nennen? | `de/leistungen.md` |
-| 5 | Optional: Italienisch als Projektsprache nennen? | `de/ueber-itcorenet.md` |
+| 1 | Besteht mit IONOS ein Auftragsverarbeitungsvertrag (AVV, Art. 28 DSGVO)? Falls nicht: im IONOS-Kundenbereich abschließen. Erst danach den entsprechenden Satz in die Datenschutzerklärung aufnehmen. | `de/datenschutz.md`, `en/privacy.md` |
+| 2 | Speicherdauer bzw. Anonymisierung der Server-Logdateien bei IONOS Webhosting Pro | `de/datenschutz.md`, `en/privacy.md` |
+| 3 | Genaue Angaben zur Spam-Begrenzung im Kontaktformular (nach der Programmierung) | `de/datenschutz.md`, `en/privacy.md` |
+| 4 | Datenschutzerklärung gegen die fertige Website prüfen (Netzwerkanfragen, Cookies, Formular) | beide |
+| 5 | Anschrift der Aufsichtsbehörde gegenprüfen; „Stand“-Datum eintragen | beide |
 
-## Wird mit der Umsetzung geklärt (keine Aktion des Inhabers nötig)
+## Mit der Umsetzung
 
-- Speicherdauer der Server-Logdateien bei IONOS Webhosting Pro
-- Genaue Angaben zur Spam-Begrenzung im Kontaktformular (Datenschutzerklärung)
-- Anschrift der Datenschutz-Aufsichtsbehörde gegenprüfen
-- Bildnachweis für Icons und Schriften
-- Ob `itcorenet.de` auf demselben Webspace liegt (Weiterleitung ohne DNS-Änderung)
-- Datum „Stand“ der Datenschutzerklärung
+- Bildnachweis für Icons und Schriften (Name, Lizenz) im Impressum ergänzen
+- Prüfen, ob `itcorenet.de` auf demselben Webspace liegt (Weiterleitung ohne DNS-Änderung)
 
 ## Empfehlung
 

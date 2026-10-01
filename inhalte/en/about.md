@@ -28,7 +28,4 @@ infrastructure, migrations, hardware standardisation and IT management.
 - Concept and implementation from a single source
 - Projects in German and English
 
-<!-- [OPTIONAL — REQUIRES OWNER CONFIRMATION] Italian as an additional project language
-(listed on the 2017 website). -->
-
 [Get in touch](/en/contact/)
