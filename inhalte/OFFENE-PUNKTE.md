@@ -29,7 +29,7 @@ Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen
 
 ## Erledigt
 
-- Speicherdauer der IONOS-Logdateien: max. 7 Tage – laut IONOS Anhang 1 zur AVV (Version 2.0, Stand 06/2023), Abschnitt 4 „Hosting Produkte“
+- Speicherdauer der IONOS-Logdateien: max. 7 Tage – laut IONOS Anhang 1 zur AVV (geprüft in Version 3.0, Stand 03/2026, und Version 2.0), Abschnitt 4 „Hosting Produkte“
 - „Stand“ der Datenschutzerklärung setzt build.py automatisch (Monat des Builds)
 
 - AV-Vertrag mit IONOS abgeschlossen (laut Inhaber, 01.10.2026) – in Datenschutzerklärung DE/EN eingetragen
