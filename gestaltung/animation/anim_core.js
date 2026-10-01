@@ -26,7 +26,7 @@ function itcAnimate(cv, opts) {
   function frame(t) {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
-    ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H);
+    if (opts.transparent) ctx.clearRect(0, 0, W, H); else { ctx.fillStyle = BG; ctx.fillRect(0, 0, W, H); }
     var fade = t < 2.1 ? 1 : Math.max(0, 1 - (t - 2.1) / 0.9);
     if (fade > 0) {
       ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
