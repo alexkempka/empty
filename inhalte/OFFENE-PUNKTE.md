@@ -13,8 +13,10 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 
 | # | Punkt |
 |---|---|
-| 6 | Zeigen `itcorenet.de`, `www.itcorenet.de` und `itcorenet.com` (ohne www) auf denselben Webspace? Nur dann greifen die Weiterleitungen aus der `.htaccess` ohne DNS-Änderung |
-| 7 | PHP-Version des Webspace (empfohlen: 8.1 oder neuer; lokal getestet mit 8.3) |
+| 6 | `itcorenet.de` zeigt vermutlich auf einen eigenen Ordner (alte deutsche Seite) → beim Upload prüfen und ggf. `fuer-itcorenet-de/.htaccess` dort ablegen (Anleitung Schritt 4b) |
+| 7 | PHP-Version beim Umschalten auf 8.x stellen – **nur** für `www.itcorenet.com`, `itcorenet.com`, `itcorenet.de`; Microsoft-Subdomains (autodiscover, lyncdiscover, sip, enterpriseregistration, enterpriseenrollment, msoid) **nicht anfassen** |
+| 7a | **SSL-Zertifikat für `itcorenet.de` fehlt** (rotes Schloss bei Domains & SSL) → `https://itcorenet.de` zeigt eine Browser-Warnung vor der Weiterleitung. Zertifikat in IONOS zuweisen (keine DNS-Änderung, braucht Freigabe) |
+| 7b | Inhaber prüft Rechnungen auf Kosten für „PHP Extended Support“ |
 | 8 | Test-Strategie vor dem Umschalten festlegen (die Seite nutzt Pfade ab Domain-Wurzel; ein Test in einem Unterordner reicht dafür nicht, eine Test-Subdomain wäre eine DNS-Ergänzung und braucht Freigabe) |
 
 ## Nicht geprüft (Werkzeug in der Entwicklungsumgebung nicht verfügbar)
@@ -28,6 +30,10 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen lassen.
 
 ## Erledigt
+
+- Seitenzähler: vom Inhaber abgelehnt – wird nicht eingebaut
+- Ist-Stand PHP (01.10.2026): itcorenet.com 5.4, www.itcorenet.com und itcorenet.de 7.4, übrige 7.0 – alle ohne Community-Support. Alte Seite nutzt kein PHP → Umstellung unkritisch
+- `itcorenet.com` (ohne www, A-Record 217.160.0.149) liefert byte-identisch dieselbe Startseite wie `www.itcorenet.com` (217.160.0.170) → sehr wahrscheinlich derselbe Webspace-Ordner; `.htaccess`-Weiterleitung auf www greift dann
 
 - Speicherdauer der IONOS-Logdateien: max. 7 Tage – laut IONOS Anhang 1 zur AVV (geprüft in Version 3.0, Stand 03/2026, und Version 2.0), Abschnitt 4 „Hosting Produkte“
 - „Stand“ der Datenschutzerklärung setzt build.py automatisch (Monat des Builds)
