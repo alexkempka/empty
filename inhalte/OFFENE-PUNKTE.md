@@ -10,7 +10,7 @@ Stand: 02.10.2026. **Die neue Website ist seit 01./02.10.2026 online** (www.itco
 | 2 | Danach: Zustellung bei Microsoft 365 testen (SPF erlaubt nur Microsoft). Bei Spam/Ablehnung: IONOS in SPF ergänzen (DNS-Änderung, braucht ausdrückliche Freigabe) oder Versand über Microsoft-365-SMTP | gemeinsam |
 | 3 | **PHP Extended Support kündigen** – alle Domains stehen seit 02.10.2026 auf PHP 8.4 (Anleitung Schritt 6) | Inhaber |
 | 4 | Darstellung in **Firefox und Safari** prüfen (Opera und Edge: vom Inhaber geprüft, in Ordnung) | Inhaber |
-| 5 | Logo-Lizenz: Kaufquelle/Lizenzbedingungen ablegen (`gestaltung/LIZENZEN.md`) | Inhaber |
+| 5 | Logo: Anbieter LogoMaker.com (geklärt). Optional: Kaufbeleg von 10/2020 ablegen; vor einer Markenanmeldung Exklusivität des Symbols prüfen (Bildersuche) und Rechtsberatung | Inhaber, optional |
 | 6 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Inhaber |
 | 7 | Außerhalb der Website: DKIM und DMARC für itcorenet.com in Microsoft 365 einrichten (DNS-Änderung) | später |
 | 8 | Impressum und Datenschutzerklärung juristisch prüfen lassen (Empfehlung) | Inhaber |
