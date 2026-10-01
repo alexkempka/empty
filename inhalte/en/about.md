@@ -17,8 +17,8 @@ day-to-day operation.
 
 ## Experience
 
-Alessandro Kempka has many years of experience in international IT projects, including
-infrastructure, migrations, hardware standardisation and IT management.
+Alessandro Kempka has more than 20 years of experience in IT management and IT projects,
+including international projects in infrastructure, migrations and hardware standardisation.
 [View selected project experience](/en/project-experience/)
 
 ## Way of working

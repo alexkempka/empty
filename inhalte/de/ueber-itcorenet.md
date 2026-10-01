@@ -18,8 +18,9 @@ den laufenden Betrieb.
 
 ## Erfahrung
 
-Alessandro Kempka bringt langjährige Erfahrung aus internationalen IT-Projekten mit, unter anderem
-in den Bereichen Infrastruktur, Migrationen, Hardware-Standardisierung und IT-Management.
+Alessandro Kempka bringt mehr als 20 Jahre Erfahrung in IT-Management und IT-Projekten mit,
+darunter internationale Vorhaben in den Bereichen Infrastruktur, Migrationen und
+Hardware-Standardisierung.
 [Ausgewählte Projekterfahrung ansehen](/de/projekterfahrung/)
 
 ## Arbeitsweise

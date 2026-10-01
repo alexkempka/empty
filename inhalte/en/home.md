@@ -78,8 +78,9 @@ You can start at any stage – even if only a single step is needed.
 
 ## Selected project experience
 
-Experience from international IT projects, including the consolidation of directory services, IT
-integration after mergers and the standardisation of client hardware.
+More than 20 years of experience in IT management and IT projects – including international
+projects such as the consolidation of directory services, IT integration after mergers and the
+standardisation of client hardware.
 
 *These projects come from the owner's previous employment and are not ITCoreNet client projects.*
 

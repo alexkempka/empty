@@ -78,9 +78,9 @@ Der Einstieg ist an jeder Stelle möglich – auch wenn nur ein einzelner Schrit
 
 ## Ausgewählte Projekterfahrung
 
-Erfahrung aus internationalen IT-Projekten, unter anderem bei der Konsolidierung von
-Verzeichnisdiensten, der IT-Integration nach Unternehmenszusammenschlüssen und der
-Standardisierung von Arbeitsplatz-Hardware.
+Mehr als 20 Jahre Erfahrung in IT-Management und IT-Projekten – darunter internationale Vorhaben
+wie die Konsolidierung von Verzeichnisdiensten, die IT-Integration nach
+Unternehmenszusammenschlüssen und die Standardisierung von Arbeitsplatz-Hardware.
 
 *Die Projekte stammen aus früheren Anstellungen des Inhabers und sind keine Kundenprojekte von
 ITCoreNet.*

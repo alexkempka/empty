@@ -20,7 +20,9 @@ Entscheidungen des Inhabers.
 - USt-IdNr. DE202184042
 - Keine Preise auf der Website; die Preisgestaltung bleibt bewusst offen
   („Jedes Vorhaben ist anders. Sie erhalten ein individuelles Angebot …“)
-- Keine konkrete Jahreszahl zur Berufserfahrung
+- Berufserfahrung: „mehr als 20 Jahre“ (vom Inhaber bestätigt), keine genauere Zahl
+- Vom Inhaber bestätigt: Projektleitung auch international; Projekte auf Deutsch und Englisch;
+  Impressum-Adresse ist zugleich Geschäftssitz (Rödermark)
 - Website und Projektsprachen: nur Deutsch und Englisch
 - Texte suggerieren kein Team und keine Firmengröße
 - Managed Services nur allgemein: „Laufende Betreuung der IT nach individuell vereinbartem
