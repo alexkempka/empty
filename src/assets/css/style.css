@@ -259,6 +259,51 @@ strong { font-weight: 600; }
   .on-dark { background: none; color: #000; }
 }
 
+/* Startseite: Kennzahlen, schwebend über der Kante des Kopfbereichs */
+.stats-wrap { position: relative; z-index: 2; margin-top: -3.25rem; }
+.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: var(--white); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 18px 40px -18px rgba(1, 30, 60, .35); overflow: hidden; }
+.stats li { display: flex; align-items: center; gap: 1.1rem; padding: 1.5rem 1.75rem; }
+.stats li + li { border-left: 1px solid var(--line); }
+.stat-num { font-size: clamp(2.25rem, 1.6rem + 2vw, 3rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1; color: var(--navy); background: linear-gradient(135deg, var(--navy), var(--action)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; flex-shrink: 0; }
+.stat-label { color: var(--muted); font-size: .9688rem; line-height: 1.4; }
+@media (max-width: 860px) {
+  .stats { grid-template-columns: 1fr; }
+  .stats li + li { border-left: 0; border-top: 1px solid var(--line); }
+  .stats li { padding: 1.1rem 1.4rem; }
+}
+
+/* Kopfbereich: Lichtschein hinter der Animation */
+.hero { position: relative; }
+.hero::before { content: ""; position: absolute; width: 60vw; max-width: 900px; aspect-ratio: 1; right: -12vw; top: 50%; transform: translateY(-50%); background: radial-gradient(closest-side, rgba(0, 166, 202, .22), rgba(0, 166, 202, 0)); pointer-events: none; }
+.hero .wrap { position: relative; padding-bottom: clamp(5.5rem, 10vw, 8rem); }
+
+/* Für wen: Illustration und Situationen */
+.who-illu { display: block; width: 100%; max-width: 520px; margin-top: 2rem; }
+.situations { list-style: none; margin: 0 0 1.5rem; padding: 0; display: grid; gap: .75rem; }
+.situations li { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--cyan); border-radius: 8px; font-weight: 500; color: var(--navy); transition: transform .2s ease, box-shadow .2s ease; }
+.situations li:hover { transform: translateX(4px); box-shadow: 0 8px 22px -14px rgba(1, 30, 60, .45); }
+.situations .icon { width: 26px; height: 26px; color: var(--action); flex-shrink: 0; }
+@media (max-width: 860px) { .who-illu { max-width: 420px; margin-inline: auto; } }
+
+/* Karten: Symbol in getönter Fläche, Farbkante beim Überfahren */
+.card { position: relative; overflow: hidden; }
+.card::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--cyan-light), var(--cyan), var(--navy)); transform: scaleX(0); transform-origin: left; transition: transform .35s ease; }
+.card:hover::before { transform: scaleX(1); }
+.card:hover { box-shadow: 0 14px 30px -18px rgba(1, 30, 60, .4); }
+.card > .icon { box-sizing: content-box; padding: 11px; border-radius: 10px; background: linear-gradient(135deg, rgba(79, 209, 232, .22), rgba(0, 121, 154, .12)); }
+
+/* Kontaktbox dunkel mit Raster */
+.cta-box--dark { border: 0; background-color: var(--night); position: relative; overflow: hidden; }
+.cta-box--dark::after { content: ""; position: absolute; width: 420px; aspect-ratio: 1; right: -120px; bottom: -200px; background: radial-gradient(closest-side, rgba(0, 166, 202, .35), rgba(0, 166, 202, 0)); pointer-events: none; }
+.cta-box--dark > * { position: relative; z-index: 1; }
+
+/* Sanftes Einblenden beim Scrollen (nur mit JavaScript und ohne reduzierte Bewegung) */
+@media (prefers-reduced-motion: no-preference) {
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  .js .card.reveal.is-visible:hover { transform: translateY(-2px); }
+}
+
 /* Abstands-Hilfsklassen (statt Inline-Stilen, wegen Content-Security-Policy) */
 .mt-s { margin-top: 1rem; }
 .mt-l { margin-top: 2.5rem; }
