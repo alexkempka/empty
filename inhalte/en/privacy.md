@@ -106,8 +106,8 @@ To exercise these rights, please contact support@itcorenet.com.
 
 You also have the right to lodge a complaint with a data protection supervisory authority
 (Art. 77 GDPR), for example the authority responsible for ITCoreNet:
-Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Gustav-Stresemann-Ring 1,
-65189 Wiesbaden, Germany.
+Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Wilhelmstraße 7,
+65185 Wiesbaden, Germany.
 
 ## 8. Obligation to provide data
 

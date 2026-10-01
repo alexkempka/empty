@@ -1,0 +1,67 @@
+---
+{"title": "Kontakt | ITCoreNet",
+ "description": "Nehmen Sie Kontakt mit ITCoreNet auf – per Kontaktformular oder E-Mail an support@itcorenet.com.",
+ "php": true,
+ "php_head": "<?php require __DIR__ . '/../../formular/handler.php'; $form = itc_contact_form('de'); $v = $form['values']; $e = $form['errors']; ?>"}
+---
+<section class="page-head page-head--plain on-dark grid-bg" aria-labelledby="titel">
+<div class="wrap">
+<p class="eyebrow">Kontakt</p>
+<h1 id="titel">Kontakt</h1>
+<p class="lead">Beschreiben Sie kurz Ihr Vorhaben oder Ihre Frage. Sie erhalten eine Rückmeldung per E-Mail.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="wrap grid-2">
+<div>
+<?php if ($e || $form['general']): ?>
+<div class="alert" role="alert" tabindex="-1" id="fehler">
+<h2>Die Nachricht wurde noch nicht gesendet</h2>
+<ul>
+<?php if ($form['general']): ?><li><?= itc_h($form['general']) ?></li><?php endif; ?>
+<?php foreach ($e as $field => $text): ?><li><a href="#f-<?= itc_h($field) ?>"><?= itc_h($text) ?></a></li><?php endforeach; ?>
+</ul>
+</div>
+<?php endif; ?>
+<h2>Kontaktformular</h2>
+<p class="form-hint">Pflichtfelder sind mit * gekennzeichnet.</p>
+<form class="form" method="post" action="/de/kontakt/" novalidate>
+<input type="hidden" name="ts" value="<?= itc_h($form['token']['ts']) ?>">
+<input type="hidden" name="sig" value="<?= itc_h($form['token']['sig']) ?>">
+<div class="field">
+<label for="f-name">Name *</label>
+<input id="f-name" name="name" type="text" autocomplete="name" required maxlength="100" value="<?= itc_h($v['name']) ?>"<?php if (isset($e['name'])): ?> aria-invalid="true" aria-describedby="err-name"<?php endif; ?>>
+<?php if (isset($e['name'])): ?><p class="err" id="err-name"><?= itc_h($e['name']) ?></p><?php endif; ?>
+</div>
+<div class="field">
+<label for="f-company">Unternehmen <span class="opt">(optional)</span></label>
+<input id="f-company" name="company" type="text" autocomplete="organization" maxlength="150" value="<?= itc_h($v['company']) ?>"<?php if (isset($e['company'])): ?> aria-invalid="true" aria-describedby="err-company"<?php endif; ?>>
+<?php if (isset($e['company'])): ?><p class="err" id="err-company"><?= itc_h($e['company']) ?></p><?php endif; ?>
+</div>
+<div class="field">
+<label for="f-email">E-Mail-Adresse *</label>
+<input id="f-email" name="email" type="email" autocomplete="email" required maxlength="254" value="<?= itc_h($v['email']) ?>"<?php if (isset($e['email'])): ?> aria-invalid="true" aria-describedby="err-email"<?php endif; ?>>
+<?php if (isset($e['email'])): ?><p class="err" id="err-email"><?= itc_h($e['email']) ?></p><?php endif; ?>
+</div>
+<div class="field">
+<label for="f-message">Nachricht *</label>
+<textarea id="f-message" name="message" required maxlength="5000" aria-describedby="hint-message<?= isset($e['message']) ? ' err-message' : '' ?>"<?php if (isset($e['message'])): ?> aria-invalid="true"<?php endif; ?>><?= itc_h($v['message']) ?></textarea>
+<p class="form-hint" id="hint-message">Worum geht es? Höchstens 5.000 Zeichen.</p>
+<?php if (isset($e['message'])): ?><p class="err" id="err-message"><?= itc_h($e['message']) ?></p><?php endif; ?>
+</div>
+<div class="hp" aria-hidden="true">
+<label for="f-website">Bitte leer lassen</label>
+<input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+</div>
+<p class="form-hint">Ihre Angaben werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und per E-Mail an ITCoreNet übermittelt. Weitere Informationen finden Sie in der <a href="/de/datenschutz/">Datenschutzerklärung</a>.</p>
+<div><button class="btn btn--primary" type="submit">Nachricht senden</button></div>
+</form>
+</div>
+<aside class="contact-aside" aria-labelledby="direkt">
+<h2 id="direkt">Direkt per E-Mail</h2>
+<p><a class="mail" href="mailto:support@itcorenet.com">support@itcorenet.com</a></p>
+<p class="muted">Jedes Vorhaben ist anders. Sie erhalten ein individuelles Angebot, das sich nach Umfang, Anforderungen und gewünschtem Servicemodell richtet.</p>
+</aside>
+</div>
+</section>

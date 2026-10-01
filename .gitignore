@@ -1,0 +1,9 @@
+# Erzeugte Website (wird mit "python3 build.py" gebaut)
+dist/
+# Zugangsdaten und Laufzeitdaten des Kontaktformulars – niemals einchecken
+src/formular/config.php
+src/formular/daten/
+# Test-Ergebnisse
+tests/ergebnisse/
+node_modules/
+__pycache__/

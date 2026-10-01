@@ -111,8 +111,8 @@ Wenden Sie sich dazu an support@itcorenet.com.
 
 Außerdem können Sie sich bei einer Datenschutz-Aufsichtsbehörde beschweren (Art. 77 DSGVO), zum
 Beispiel bei der für ITCoreNet zuständigen Behörde:
-Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Gustav-Stresemann-Ring 1,
-65189 Wiesbaden.
+Der Hessische Beauftragte für Datenschutz und Informationsfreiheit, Wilhelmstraße 7,
+65185 Wiesbaden.
 
 <!-- [OFFEN] Anschrift der Aufsichtsbehörde vor Veröffentlichung auf datenschutz.hessen.de prüfen. -->
 

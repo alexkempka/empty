@@ -7,7 +7,9 @@ Entscheidungen des Inhabers.
 
 - `itcorenet.com/de/` – Deutsch, `itcorenet.com/en/` – Englisch, beide vollständig
 - `itcorenet.de` und `www.itcorenet.de` → dauerhafte Weiterleitung (301) auf `itcorenet.com/de/`
-- `itcorenet.com/` → Weiterleitung auf `/de/`; alte Adresse `/index.html` → `/en/`
+- Hauptadresse: **`https://www.itcorenet.com`** (die heutige Website läuft unter www; `itcorenet.com` ohne www
+  wird – sofern es auf denselben Webspace zeigt – dorthin umgeleitet)
+- `/` → Weiterleitung auf `/de/`; alte Adresse `/index.html` → `/en/`
 - **DNS, MX-Einträge und E-Mail werden nicht verändert.** `support@itcorenet.com` muss weiter
   funktionieren. Die Weiterleitung von `itcorenet.de` soll ohne DNS-Änderung über `.htaccess`
   erfolgen (vor dem Deployment zu prüfen).

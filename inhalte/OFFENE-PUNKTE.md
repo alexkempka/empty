@@ -1,23 +1,38 @@
-# Offene Punkte
+# Offene Punkte vor der Veröffentlichung
 
-Stand: 01.10.2026. Nur Punkte, die vor der Veröffentlichung geklärt sein müssen. Keiner davon
-blockiert die Texte.
+Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese Punkte sind noch offen.
 
-## Für die Datenschutzprüfung (vor Veröffentlichung)
+## Vom Inhaber zu klären
 
-| # | Punkt | Datei |
+| # | Punkt | Warum |
 |---|---|---|
-| 1 | Besteht mit IONOS ein Auftragsverarbeitungsvertrag (AVV, Art. 28 DSGVO)? Falls nicht: im IONOS-Kundenbereich abschließen. Erst danach den entsprechenden Satz in die Datenschutzerklärung aufnehmen. | `de/datenschutz.md`, `en/privacy.md` |
-| 2 | Speicherdauer bzw. Anonymisierung der Server-Logdateien bei IONOS Webhosting Pro | `de/datenschutz.md`, `en/privacy.md` |
-| 3 | Genaue Angaben zur Spam-Begrenzung im Kontaktformular (nach der Programmierung) | `de/datenschutz.md`, `en/privacy.md` |
-| 4 | Datenschutzerklärung gegen die fertige Website prüfen (Netzwerkanfragen, Cookies, Formular) | beide |
-| 5 | Anschrift der Aufsichtsbehörde gegenprüfen; „Stand“-Datum eintragen | beide |
+| 1 | **Auftragsverarbeitungsvertrag (AVV) mit IONOS** prüfen bzw. im IONOS-Kundenbereich abschließen | Pflicht nach Art. 28 DSGVO; erst danach Satz in der Datenschutzerklärung ergänzen |
+| 2 | **Logo-Lizenz:** Bei welchem Dienst wurde das Logo gekauft? Rechnung/Lizenzbedingungen ablegen | Dokumentation der Nutzungsrechte (`gestaltung/LIZENZEN.md`) |
+| 3 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Personenbezogene Angabe |
+| 4 | **SFTP-Zugang** bei IONOS anlegen (eigener Benutzer, nicht das Hauptpasswort) | Für Sicherung und Upload |
 
-## Mit der Umsetzung
+## Vor dem Deployment zu prüfen (mit IONOS-Zugang)
 
-- Bildnachweis für Icons und Schriften (Name, Lizenz) im Impressum ergänzen
-- Prüfen, ob `itcorenet.de` auf demselben Webspace liegt (Weiterleitung ohne DNS-Änderung)
+| # | Punkt |
+|---|---|
+| 5 | Speicherdauer der Server-Logdateien bei IONOS Webhosting Pro → in Datenschutzerklärung eintragen |
+| 6 | Zeigen `itcorenet.de`, `www.itcorenet.de` und `itcorenet.com` (ohne www) auf denselben Webspace? Nur dann greifen die Weiterleitungen aus der `.htaccess` ohne DNS-Änderung |
+| 7 | PHP-Version des Webspace (empfohlen: 8.1 oder neuer; lokal getestet mit 8.3) |
+| 8 | Test-Strategie vor dem Umschalten festlegen (die Seite nutzt Pfade ab Domain-Wurzel; ein Test in einem Unterordner reicht dafür nicht, eine Test-Subdomain wäre eine DNS-Ergänzung und braucht Freigabe) |
+| 9 | Datum „Stand“ der Datenschutzerklärung beim Veröffentlichen eintragen |
+
+## Nicht geprüft (Werkzeug in der Entwicklungsumgebung nicht verfügbar)
+
+- Darstellung in **Firefox, Safari und Edge** – getestet wurde mit Chromium (Grundlage von Chrome und Edge).
+  Empfehlung: nach dem Test-Upload auf eigenen Geräten (iPhone/Safari, Windows/Edge, Firefox) ansehen.
+- Echter Mailversand über den IONOS-Mailserver (lokal wird mail() in eine Datei umgeleitet).
 
 ## Empfehlung
 
 Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen lassen.
+
+## Erledigt
+
+- Anschrift der Aufsichtsbehörde aktualisiert: Wilhelmstraße 7, 65185 Wiesbaden (Umzug am 16.03.2026,
+  laut Pressemitteilung des HBDI)
+- Kein Hinweis zur Verbraucherschlichtung nötig (siehe `KONZEPT.md`)

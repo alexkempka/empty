@@ -1,0 +1,68 @@
+# ITCoreNet – Serverkonfiguration (Apache 2.4, IONOS Webhosting)
+# Betrifft nur die Website. DNS, MX-Einträge und E-Mail werden hiervon NICHT berührt.
+
+Options -Indexes -MultiViews
+DirectoryIndex index.html index.php
+ErrorDocument 404 /404.html
+AddDefaultCharset UTF-8
+
+<IfModule mod_mime.c>
+  AddType font/woff2 .woff2
+  AddType image/svg+xml .svg
+  AddType application/xml .xml
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. itcorenet.de (mit und ohne www) -> deutsche Startseite auf itcorenet.com
+  #    Greift nur, wenn itcorenet.de auf diesen Webspace zeigt. Es wird kein DNS geändert.
+  RewriteCond %{HTTP_HOST} ^(www\.)?itcorenet\.de$ [NC]
+  RewriteRule ^ https://www.itcorenet.com/de/ [R=301,L]
+
+  # 2. Einheitliche Adresse: https://www.itcorenet.com
+  #    Nur für die eigene Domain, damit Tests unter einer IONOS-Vorschauadresse nicht umgeleitet werden.
+  RewriteCond %{HTTP_HOST} ^(www\.)?itcorenet\.com$ [NC]
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^itcorenet\.com$ [NC]
+  RewriteRule ^(.*)$ https://www.itcorenet.com/$1 [R=301,L]
+
+  # 3. Startseite -> Deutsch; alte englische Startseite -> Englisch
+  RewriteRule ^$ /de/ [R=301,L]
+  RewriteRule ^index\.html?$ /en/ [R=301,L]
+</IfModule>
+
+# Versteckte Dateien und Quelldateien sperren (Ausnahme: .well-known für Zertifikate)
+<IfModule mod_rewrite.c>
+  RewriteRule "(^|/)\.(?!well-known/)" - [F]
+</IfModule>
+<FilesMatch "\.(md|py|log|ini|sh|bak|sql|example\.php|json)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "DENY"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests"
+  Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+  Header always unset X-Powered-By
+  Header unset X-Powered-By
+
+  # HTML immer frisch prüfen, versionierte CSS/JS und Schriften lange zwischenspeichern
+  <FilesMatch "\.(html|php)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(svg|png|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/xml application/javascript text/javascript image/svg+xml application/ld+json
+</IfModule>
