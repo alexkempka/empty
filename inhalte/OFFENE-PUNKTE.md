@@ -1,48 +1,31 @@
-# Offene Punkte vor der Veröffentlichung
+# Offene Punkte
 
-Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese Punkte sind noch offen.
+Stand: 02.10.2026. **Die neue Website ist seit 01./02.10.2026 online** (www.itcorenet.com, DE/EN).
 
-## Vom Inhaber zu klären
+## Offen
 
-| # | Punkt | Warum |
+| # | Punkt | Wer |
 |---|---|---|
-| 2 | **Logo-Lizenz:** Bei welchem Dienst wurde das Logo gekauft? Rechnung/Lizenzbedingungen ablegen | Dokumentation der Nutzungsrechte (`gestaltung/LIZENZEN.md`) |
-| 3 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Personenbezogene Angabe |
+| 1 | **Kontaktformular verschickt keine E-Mails:** IONOS-Mailversand aus dem Webspace scheitert mit „535 Authentication credentials invalid“ für den IONOS-internen Versandbenutzer (laut msmtp-Protokoll). Liegt bei IONOS → Support-Ticket. Besucher erhalten bis dahin den Hinweis, direkt an support@itcorenet.com zu schreiben | Inhaber (IONOS-Support) |
+| 2 | Danach: Zustellung bei Microsoft 365 testen (SPF erlaubt nur Microsoft). Bei Spam/Ablehnung: IONOS in SPF ergänzen (DNS-Änderung, braucht ausdrückliche Freigabe) oder Versand über Microsoft-365-SMTP | gemeinsam |
+| 3 | **PHP Extended Support kündigen** – alle Domains stehen seit 02.10.2026 auf PHP 8.4 (Anleitung Schritt 6) | Inhaber |
+| 4 | Darstellung in **Firefox und Safari** prüfen (Opera und Edge: vom Inhaber geprüft, in Ordnung) | Inhaber |
+| 5 | Logo-Lizenz: Kaufquelle/Lizenzbedingungen ablegen (`gestaltung/LIZENZEN.md`) | Inhaber |
+| 6 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Inhaber |
+| 7 | Außerhalb der Website: DKIM und DMARC für itcorenet.com in Microsoft 365 einrichten (DNS-Änderung) | später |
+| 8 | Impressum und Datenschutzerklärung juristisch prüfen lassen (Empfehlung) | Inhaber |
+| 9 | Sicherung der alten Website (lokal + zweite Kopie) und Archivordner auf dem Server **nicht löschen**, bis die neue Seite einige Wochen stabil läuft | Inhaber |
 
-## Vor dem Deployment zu prüfen (mit IONOS-Zugang)
+## Erledigt (Veröffentlichung 01./02.10.2026)
 
-| # | Punkt |
-|---|---|
-| 6 | `itcorenet.de` zeigt vermutlich auf einen eigenen Ordner (alte deutsche Seite) → beim Upload prüfen und ggf. `fuer-itcorenet-de/.htaccess` dort ablegen (Anleitung Schritt 4b) |
-| 7 | PHP-Version beim Umschalten auf 8.x stellen – **nur** für `www.itcorenet.com`, `itcorenet.com`, `itcorenet.de`; Microsoft-Subdomains (autodiscover, lyncdiscover, sip, enterpriseregistration, enterpriseenrollment, msoid) **nicht anfassen** |
-| 7a | **SSL-Zertifikat für `itcorenet.de` fehlt** (rotes Schloss bei Domains & SSL) → `https://itcorenet.de` zeigt eine Browser-Warnung vor der Weiterleitung. Zertifikat in IONOS zuweisen (keine DNS-Änderung, braucht Freigabe) |
-| 7b | **PHP Extended Support ist aktiv (kostenpflichtig)**. Er bleibt aktiv, solange irgendeine (Sub-)Domain eine alte Version nutzt, und muss nach der Umstellung separat gekündigt werden („Zusatzartikel kündigen“, IONOS-Hilfe). Die Microsoft-Subdomains zeigen per DNS zu Microsoft (autodiscover → outlook.com, enterprise* → Microsoft, msoid → microsoftonline) bzw. existieren nicht (lyncdiscover, sip) – ihre IONOS-PHP-Einstellung wird nie benutzt; Umstellung dort ändert kein DNS |
-| 7c | **E-Mail läuft über Microsoft 365** (MX: itcorenet-com.mail.protection.outlook.com). SPF: `v=spf1 include:spf.protection.outlook.com -all` → Mails des Kontaktformulars über den IONOS-Mailserver mit Absender @itcorenet.com bestehen SPF nicht und landen evtl. im Spam oder werden abgelehnt. Beim Upload real testen; Lösungen: (1) IONOS in SPF aufnehmen – DNS-TXT-Änderung, braucht ausdrückliche Freigabe; (2) Versand über Microsoft-365-SMTP; (3) andere Absenderadresse |
-| 7d | Hinweis außerhalb der Website: Für itcorenet.com sind kein DMARC und kein DKIM (selector1) eingerichtet → Schutz gegen gefälschte Absender fehlt. Mit Microsoft-365-Verwaltung besprechen (DNS-Änderung) |
-| 8 | Test-Strategie vor dem Umschalten festlegen (die Seite nutzt Pfade ab Domain-Wurzel; ein Test in einem Unterordner reicht dafür nicht, eine Test-Subdomain wäre eine DNS-Ergänzung und braucht Freigabe) |
-
-## Nicht geprüft (Werkzeug in der Entwicklungsumgebung nicht verfügbar)
-
-- Darstellung in **Firefox, Safari und Edge** – getestet wurde mit Chromium (Grundlage von Chrome und Edge).
-  Empfehlung: nach dem Test-Upload auf eigenen Geräten (iPhone/Safari, Windows/Edge, Firefox) ansehen.
-- Echter Mailversand über den IONOS-Mailserver (lokal wird mail() in eine Datei umgeleitet).
-
-## Empfehlung
-
-Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen lassen.
-
-## Erledigt
-
-- Seitenzähler: vom Inhaber abgelehnt – wird nicht eingebaut
-- Ist-Stand PHP (01.10.2026): itcorenet.com 5.4, www.itcorenet.com und itcorenet.de 7.4, übrige 7.0 – alle ohne Community-Support. Alte Seite nutzt kein PHP → Umstellung unkritisch
-- `itcorenet.com` (ohne www, A-Record 217.160.0.149) liefert byte-identisch dieselbe Startseite wie `www.itcorenet.com` (217.160.0.170) → sehr wahrscheinlich derselbe Webspace-Ordner; `.htaccess`-Weiterleitung auf www greift dann
-
-- Speicherdauer der IONOS-Logdateien: max. 7 Tage – laut IONOS Anhang 1 zur AVV (geprüft in Version 3.0, Stand 03/2026, und Version 2.0), Abschnitt 4 „Hosting Produkte“
-- „Stand“ der Datenschutzerklärung setzt build.py automatisch (Monat des Builds)
-
-- AV-Vertrag mit IONOS abgeschlossen (laut Inhaber, 01.10.2026) – in Datenschutzerklärung DE/EN eingetragen
-- SFTP-Benutzer bei IONOS angelegt (laut Inhaber)
-
-- Anschrift der Aufsichtsbehörde aktualisiert: Wilhelmstraße 7, 65185 Wiesbaden (Umzug am 16.03.2026,
-  laut Pressemitteilung des HBDI)
-- Kein Hinweis zur Verbraucherschlichtung nötig (siehe `KONZEPT.md`)
+- Sicherung des Webspace per SFTP: 310 Dateien, 0 Fehler
+- Alte Website(s) nach `/_archiv-alte-website-2026-10-01/` und `/itcorenet_de/_archiv-2026-10-01/` verschoben, per `.htaccess` gesperrt (403, geprüft)
+- Neue Website hochgeladen; alle Seiten 200, 404-Seite, Sitemap, robots.txt geprüft
+- Weiterleitungen geprüft: `/` → `/de/`, `/index.html` → `/en/`, HTTP → HTTPS, `itcorenet.com` → `www`, `/itcorenet_de/` → `/de/`; `https://itcorenet.de` → `/de/` ohne Warnung (Inhaber)
+- Sicherheits-Header (CSP, HSTS u. a.) und gzip-Komprimierung live geprüft; keine Cookies, kein X-Powered-By
+- PHP für alle 10 Domains/Subdomains auf 8.4 umgestellt (Ursache des anfänglichen Fehlers 500 der Kontaktseiten: PHP 7.4)
+- SSL-Zertifikat für `itcorenet.de` eingerichtet
+- Formular-Schlüssel automatisch erzeugt, von außen gesperrt (403)
+- Diagnose-Dateien (`php.ini`, `mail.log`, `debug.log`) nach dem Test zu löschen – enthielten interne IONOS-Zugangsdaten
+- Speicherdauer IONOS-Logdateien max. 7 Tage (AVV-Anhang 1, v3.0 03/2026); AV-Vertrag abgeschlossen; Aufsichtsbehörde Wilhelmstraße 7, 65185 Wiesbaden
+- Seitenzähler: vom Inhaber abgelehnt
