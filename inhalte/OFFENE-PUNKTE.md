@@ -11,7 +11,7 @@ Stand: 02.10.2026. **Die neue Website ist seit 01./02.10.2026 online** (www.itco
 | 3 | **PHP Extended Support kündigen** – alle Domains stehen seit 02.10.2026 auf PHP 8.4 (Anleitung Schritt 6) | Inhaber |
 | 4 | Darstellung in **Firefox und Safari** prüfen (Opera und Edge: vom Inhaber geprüft, in Ordnung) | Inhaber |
 | 5 | Logo (LogoMaker.com, Kauf 17.04.2017): Nutzung auf der Website erlaubt (Nutzungsbedingungen 08/2026, Logo-Dienste 2.1 und 22.7); Symbol nicht exklusiv, daher Markenanmeldung des Symbols unsicher. Favicon/Apple-Touch-Icon (nur Symbol) bleiben – Entscheidung des Inhabers vom 01.10.2026. Optional: Kaufbeleg ablegen | Inhaber, optional |
-| 10 | Update „Startseite lebendiger + Themen“ (freigegeben 01.10.2026) hochladen: Paket `itcorenet-update-startseite-2026-10-01.zip`, Anleitung Abschnitt „Spätere Aktualisierungen“ | Inhaber |
+| 10 | – (Updates „Startseite lebendiger + Themen“ und „Animation IT-Landschaft“ am 01.10.2026 hochgeladen und live geprüft) | erledigt |
 | 6 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Inhaber |
 | 7 | Außerhalb der Website: DKIM und DMARC für itcorenet.com in Microsoft 365 einrichten (DNS-Änderung) | später |
 | 8 | Impressum und Datenschutzerklärung juristisch prüfen lassen (Empfehlung) | Inhaber |
