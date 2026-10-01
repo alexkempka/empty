@@ -69,6 +69,21 @@ Danach liegen dort u. a. `.htaccess`, `404.html`, `de/`, `en/`, `assets/`, `form
 (Schritt 2) und beiseitelegen (Schritt 3) und dann `fuer-itcorenet-de/.htaccess` dort hochladen. Diese Datei
 leitet `itcorenet.de` dauerhaft auf `https://www.itcorenet.com/de/` um – ganz ohne DNS-Änderung.
 
+## Schritt 4c – PHP-Version umstellen
+
+Laut IONOS-Hilfe: *Menü → Hosting → Kachel „PHP“ → Verwalten*. Alle Einträge markieren (Kontrollkästchen oben links),
+dann **PHP-Version auswählen** → die **neueste 8er-Version** (z. B. 8.3 oder 8.4) → **Speichern**.
+Unbedenklich: Die alte Website nutzt kein PHP; die Microsoft-Subdomains zeigen per DNS direkt zu Microsoft
+und werden von IONOS nie ausgeliefert. Es wird dabei **kein DNS** geändert.
+
+## Schritt 4d – SSL-Zertifikat für itcorenet.de
+
+Laut IONOS-Hilfe: *Menü → Domains & SSL → Kachel „Portfolio“ → bei „SSL-Zertifikate“ auf Verwalten →
+„SSL-Zertifikat einrichten“* → beim gewünschten Zertifikat **Jetzt aktivieren** → Domain `itcorenet.de` wählen →
+Verwendungszweck **„Für meine IONOS Website verwenden“** → Nutzungsbedingungen bestätigen → **SSL-Zertifikat einrichten**.
+**Achtung Kosten:** Nur ein Zertifikat wählen, das in deinem Vertrag ohne Aufpreis enthalten ist. Wird ein Preis
+angezeigt, erst abbrechen und mir Bescheid geben. (`itcorenet.com` hat bereits ein gültiges Zertifikat.)
+
 ## Schritt 5 – Prüfen
 
 Im Browser (am besten in einem privaten Fenster):
@@ -85,6 +100,12 @@ Im Browser (am besten in einem privaten Fenster):
 - [ ] Safari (iPhone/Mac), Edge, Firefox kurz ansehen
 
 Schick mir das Ergebnis – bei Auffälligkeiten mit Bildschirmfoto.
+
+## Schritt 6 – PHP Extended Support kündigen
+
+Erst wenn alles läuft: Der Extended Support endet **nicht automatisch**. Laut IONOS-Hilfe wird er als
+„Zusatzartikel“ gekündigt (Hilfe-Artikel „Zusatzartikel kündigen“) oder über den IONOS-Kundenservice.
+Vorher in *Hosting → PHP* prüfen, dass **keine** Zeile mehr eine alte Version (5.x oder 7.x) zeigt.
 
 ## Notfall: Zurück zur alten Website
 
