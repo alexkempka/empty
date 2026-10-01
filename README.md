@@ -72,7 +72,7 @@ php -S localhost:8000 -t dist
 ```
 Dann im Browser `http://localhost:8000/de/` öffnen.
 Hinweis: Der einfache PHP-Server wertet die `.htaccess` nicht aus (keine Weiterleitungen, keine Sicherheits-Header).
-Für das Kontaktformular muss `dist/formular/config.php` existieren (siehe Abschnitt 6).
+Das Kontaktformular braucht keine Einrichtung (siehe Abschnitt 6); E-Mails verschickt der einfache PHP-Server je nach System nicht.
 
 ## 5. Tests
 
@@ -83,19 +83,19 @@ Für das Kontaktformular muss `dist/formular/config.php` existieren (siehe Absch
 
 Beide Tests laufen gegen einen **lokalen Apache-Testserver** (wie bei IONOS) und rufen nie die Live-Website auf.
 
-## 6. Kontaktformular einrichten (einmalig auf dem Server)
+## 6. Kontaktformular
 
-Im Ordner `formular/` auf dem Webspace eine Datei `config.php` anlegen – Vorlage: `formular/config.example.php`.
+Funktioniert ohne Einrichtung: Empfänger und Absender sind `support@itcorenet.com`, der geheime Schlüssel wird
+beim ersten Aufruf automatisch erzeugt und in `formular/daten/schluessel.php` gespeichert (von außen gesperrt).
+Nur für abweichende Einstellungen `formular/config.php` nach Vorlage `formular/config.example.php` anlegen.
+Der Ordner `formular/daten/` muss für PHP beschreibbar sein (bei IONOS Standard).
 
-- `to`: Empfänger der Anfragen (`support@itcorenet.com`)
-- `from`: Absender – muss ein Postfach der eigenen Domain sein
-- `secret`: 64 zufällige Zeichen, z. B. erzeugt mit `php -r 'echo bin2hex(random_bytes(32)), PHP_EOL;'`
-
-`config.php` wird **nie** ins Repository eingecheckt und ist per `.htaccess` gesperrt.
 Spam-Schutz ohne Fremddienst: verstecktes Fallen-Feld, Mindest-Ausfülldauer (3 s), signierter Zeitstempel,
 höchstens 5 Nachrichten pro Stunde und IP-Adresse (IP nur als HMAC-Prüfwert, max. 1 Stunde gespeichert).
 
 ## 7. Veröffentlichen auf IONOS (nur nach ausdrücklicher Freigabe)
+
+Ausführliche Schritt-für-Schritt-Anleitung mit FileZilla: **[`ANLEITUNG-VEROEFFENTLICHUNG.md`](ANLEITUNG-VEROEFFENTLICHUNG.md)**
 
 **DNS, MX-Einträge und E-Mail-Einstellungen werden dabei nicht verändert.**
 
@@ -108,7 +108,7 @@ höchstens 5 Nachrichten pro Stunde und IP-Adresse (IP nur als HMAC-Prüfwert, m
 4. **Testen vor dem Umschalten:** Inhalt von `dist/` zuerst in einen separaten Ordner hochladen und dort prüfen
    (Vorgehen wird vor dem Deployment gemeinsam festgelegt – siehe `inhalte/OFFENE-PUNKTE.md`).
 5. **Umschalten:** Alte Website-Dateien im Wurzelordner in einen Archivordner verschieben (nicht löschen),
-   dann den Inhalt von `dist/` in den Wurzelordner hochladen und `formular/config.php` anlegen.
+   dann den Inhalt von `dist/` in den Wurzelordner hochladen.
 6. **Prüfen:** alle Seiten, Links, Sprachwechsel, Kontaktformular (Testnachricht), Impressum, Datenschutz, HTTPS,
    Weiterleitungen (`itcorenet.de`, alte `/index.html`), Handy-Ansicht – **und dass E-Mails an support@itcorenet.com
    weiterhin ankommen**.
@@ -123,5 +123,5 @@ höchstens 5 Nachrichten pro Stunde und IP-Adresse (IP nur als HMAC-Prüfwert, m
 
 1. Texte/Bilder in `src/` ändern (Abschnitt 2).
 2. `python3 build.py --release` und Tests ausführen (Abschnitt 5).
-3. Nur die geänderten Dateien aus `dist/` per SFTP hochladen – `formular/config.php` auf dem Server bleibt bestehen.
+3. Nur die geänderten Dateien aus `dist/` per SFTP hochladen – den Ordner `formular/daten/` auf dem Server nicht überschreiben oder löschen.
 4. Bei Änderungen an der Technik (Formular, Skripte) die Datenschutzerklärung prüfen.

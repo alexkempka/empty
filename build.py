@@ -3,6 +3,7 @@
 
 Aufruf:  python3 build.py              (Vorschau)
          python3 build.py --release    (Veröffentlichung; bricht ab, solange [OFFEN]-Punkte im Text stehen)
+         python3 build.py --release --zip   (zusätzlich ZIP-Paket zum Hochladen)
 Ergebnis: Ordner dist/ – genau dieser Inhalt wird auf den IONOS-Webspace hochgeladen.
 
 Benötigt nur Python 3 (keine Zusatzpakete).
@@ -10,6 +11,7 @@ Benötigt nur Python 3 (keine Zusatzpakete).
 import hashlib
 import html
 import sys
+import zipfile
 import json
 import re
 import shutil
@@ -231,6 +233,30 @@ def build():
             shutil.rmtree(DIST)
             raise SystemExit("Abbruch: Für die Veröffentlichung müssen alle [OFFEN]-Punkte erledigt sein.")
     print(f"Fertig: {sum(1 for _ in DIST.rglob('*') if _.is_file())} Dateien in {DIST}")
+    if "--zip" in sys.argv:
+        make_package()
+
+
+ARCHIVE_HTACCESS = "# Archiv der alten Website – nicht aus dem Internet abrufbar\nRequire all denied\n"
+DE_REDIRECT_HTACCESS = (
+    "# itcorenet.de dauerhaft auf die deutsche Seite von www.itcorenet.com umleiten (keine DNS-Änderung)\n"
+    "<IfModule mod_rewrite.c>\n  RewriteEngine On\n  RewriteRule ^ https://www.itcorenet.com/de/ [R=301,L]\n</IfModule>\n"
+)
+
+
+def make_package():
+    """ZIP zum Hochladen per FileZilla – siehe ANLEITUNG-VEROEFFENTLICHUNG.md."""
+    if not RELEASE:
+        raise SystemExit("Das Paket wird nur zusammen mit --release erzeugt.")
+    name = ROOT / f"itcorenet-website-{date.today().isoformat()}.zip"
+    with zipfile.ZipFile(name, "w", zipfile.ZIP_DEFLATED) as z:
+        for f in sorted(DIST.rglob("*")):
+            if f.is_file():
+                z.write(f, "website/" + str(f.relative_to(DIST)))
+        z.writestr("fuer-archivordner/.htaccess", ARCHIVE_HTACCESS)
+        z.writestr("fuer-itcorenet-de/.htaccess", DE_REDIRECT_HTACCESS)
+        z.write(ROOT / "ANLEITUNG-VEROEFFENTLICHUNG.md", "ANLEITUNG-VEROEFFENTLICHUNG.md")
+    print(f"Paket: {name.name}")
 
 
 if __name__ == "__main__":

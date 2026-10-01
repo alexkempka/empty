@@ -111,19 +111,52 @@ function itc_rate_ok(string $secret): bool
     return $ok;
 }
 
+/**
+ * Geheimer Schlüssel für Formular-Signatur und IP-Prüfwerte.
+ * Wird beim ersten Aufruf zufällig erzeugt und im gesperrten Ordner daten/ gespeichert –
+ * so muss beim Hochladen nichts von Hand eingerichtet werden.
+ */
+function itc_secret(): string
+{
+    $dir = __DIR__ . '/daten';
+    $file = $dir . '/schluessel.php';
+    if (is_file($file)) {
+        $key = require $file;
+        if (is_string($key) && strlen($key) >= 32) {
+            return $key;
+        }
+    }
+    if (!is_dir($dir) && !@mkdir($dir, 0750, true)) {
+        return '';
+    }
+    if (!is_file($dir . '/.htaccess')) {
+        @file_put_contents($dir . '/.htaccess', "Require all denied\n");
+    }
+    $key = bin2hex(random_bytes(32));
+    if (@file_put_contents($file, "<?php\nreturn '" . $key . "';\n", LOCK_EX) === false) {
+        return '';
+    }
+    @chmod($file, 0600);
+    return $key;
+}
+
 function itc_contact_form(string $lang): array
 {
     $msg = itc_messages($lang);
     $configFile = __DIR__ . '/config.php';
-    $config = is_file($configFile) ? require $configFile : null;
-    $secret = is_array($config) ? (string) ($config['secret'] ?? '') : '';
+    $config = is_file($configFile) ? require $configFile : [];
+    $config = (is_array($config) ? $config : []) + [
+        'to' => 'support@itcorenet.com',
+        'from' => 'support@itcorenet.com',
+    ];
+    $secret = (string) ($config['secret'] ?? itc_secret());
 
     $form = ['values' => ['name' => '', 'company' => '', 'email' => '', 'message' => ''],
              'errors' => [], 'general' => '', 'token' => ['ts' => '', 'sig' => '']];
 
     if (strlen($secret) < 32) {
         $form['general'] = $msg['send'];
-        error_log('ITCoreNet-Kontaktformular: config.php fehlt oder Geheimschlüssel zu kurz.');
+        error_log('ITCoreNet-Kontaktformular: Geheimschlüssel konnte nicht erzeugt werden (Ordner formular/daten nicht beschreibbar?).');
         return $form;
     }
 
