@@ -92,3 +92,12 @@ den IONOS-Mailserver, ohne externen Formulardienst und ohne externes CAPTCHA). K
 Bootstrap, keine Datenbank, lokale Schriften, keine Drittanbieter-Anfragen. Sicherheits-Header,
 Komprimierung, Caching, Sitemap, robots.txt, Canonical, hreflang, Barrierearmut, Mobiloptimierung.
 Hosting: IONOS Webhosting Pro.
+
+## Logo-Animation (Entscheidung des Inhabers)
+
+- Nachbau der ursprünglichen GIF-Animation als Canvas-Skript (`gestaltung/animation/`), ca. 10 KB
+- Einsatz auf **beiden** Seiten: im Kopfbereich der Startseite (statt des drehenden Punkt-Rings)
+  und als Eröffnung der Seite „Über ITCoreNet“
+- Läuft pro Seitenaufruf einmal ab und steht dann still; bei „Bewegung reduzieren“ sofort fertiges Logo
+- Kein „schon gesehen“-Merker im Browser (würde nach § 25 TDDDG eine Einwilligung erfordern)
+- Nennung des Neffen: vorerst nicht (Inhaber fragt nach)
