@@ -107,6 +107,17 @@ Erst wenn alles läuft: Der Extended Support endet **nicht automatisch**. Laut I
 „Zusatzartikel“ gekündigt (Hilfe-Artikel „Zusatzartikel kündigen“) oder über den IONOS-Kundenservice.
 Vorher in *Hosting → PHP* prüfen, dass **keine** Zeile mehr eine alte Version (5.x oder 7.x) zeigt.
 
+## Spätere Aktualisierungen
+
+Für Änderungen an der fertigen Website gibt es ein Update-Paket `itcorenet-update-….zip`, das nur den Ordner `website/` enthält.
+
+1. ZIP entpacken. FileZilla verbinden, *Server → Anzeige versteckter Dateien erzwingen* muss eingeschaltet sein.
+2. Links den entpackten Ordner `website` öffnen, rechts den Website-Ordner auf dem Server (dort liegen `de/`, `en/`, `assets/`).
+3. Links **alles im Ordner `website`** markieren → Rechtsklick → *Hochladen*.
+4. Bei „Zieldatei existiert bereits“: **Überschreiben** wählen und *Immer diese Aktion verwenden* ankreuzen.
+5. **Nichts auf dem Server löschen.** Insbesondere `formular/daten/` bleibt unangetastet (dort liegt der automatisch erzeugte Formular-Schlüssel; er ist nicht im Paket).
+6. Im Browser mit **Strg + F5** neu laden und prüfen.
+
 ## Notfall: Zurück zur alten Website
 
 1. Neue Dateien im Website-Ordner in einen Ordner `_neu-zurueckgezogen` verschieben.
