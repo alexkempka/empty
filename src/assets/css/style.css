@@ -297,6 +297,49 @@ strong { font-weight: 600; }
 .cta-box--dark::after { content: ""; position: absolute; width: 420px; aspect-ratio: 1; right: -120px; bottom: -200px; background: radial-gradient(closest-side, rgba(0, 166, 202, .35), rgba(0, 166, 202, 0)); pointer-events: none; }
 .cta-box--dark > * { position: relative; z-index: 1; }
 
+/* Startseite: animiertes Piktogramm „IT-Check“ neben den typischen Fragen */
+.split-head { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 2rem 3rem; align-items: center; }
+.check-illu { width: 100%; max-width: 400px; justify-self: end; overflow: visible; }
+.check-illu .ci-frame { fill: var(--white); stroke: var(--line); stroke-width: 2; }
+.check-illu .ci-screen { fill: var(--tint); }
+.check-illu .ci-line, .check-illu .ci-stand { fill: none; stroke: var(--line); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.check-illu .ci-stand { stroke-width: 3; }
+.check-illu .ci-led1 { fill: var(--cyan-light); } .check-illu .ci-led2 { fill: var(--cyan); } .check-illu .ci-led3 { fill: var(--navy); }
+.check-illu .ci-bars rect { fill: var(--cyan); opacity: .75; transform-box: fill-box; transform-origin: bottom; }
+.check-illu .ci-bars rect:nth-child(2n) { fill: var(--navy); opacity: .85; }
+.check-illu .ci-pulse { fill: none; stroke: var(--action); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 100; stroke-dashoffset: 0; }
+.check-illu .ci-glass { fill: rgba(79, 209, 232, .14); stroke: var(--navy); stroke-width: 5; }
+.check-illu .ci-handle { stroke: var(--navy); stroke-width: 8; stroke-linecap: round; }
+.check-illu .ci-lens { transform-box: view-box; }
+.check-illu .ci-badge circle { fill: var(--cyan); }
+.check-illu .ci-badge path { fill: none; stroke: var(--white); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+.check-illu .ci-badge { transform-box: fill-box; transform-origin: center; }
+.check-illu .ci-dots circle { fill: var(--cyan-light); opacity: .6; }
+.check-illu .ci-dots circle:nth-child(2n) { fill: var(--navy); opacity: .3; }
+@media (prefers-reduced-motion: no-preference) {
+  .check-illu .ci-pulse { animation: ci-draw 3.2s ease-in-out infinite; }
+  .check-illu .ci-bars rect { animation: ci-bar 3.2s ease-in-out infinite; }
+  .check-illu .ci-bars rect:nth-child(2) { animation-delay: .25s; }
+  .check-illu .ci-bars rect:nth-child(3) { animation-delay: .5s; }
+  .check-illu .ci-bars rect:nth-child(4) { animation-delay: .75s; }
+  .check-illu .ci-lens { animation: ci-scan 6.4s ease-in-out infinite; }
+  .check-illu .ci-badge { animation: ci-pop 3.2s ease-in-out infinite; }
+  .check-illu .ci-led { animation: ci-blink 2.4s ease-in-out infinite; }
+  .check-illu .ci-led2 { animation-delay: .4s; } .check-illu .ci-led3 { animation-delay: .8s; }
+}
+@keyframes ci-draw { 0% { stroke-dashoffset: 100; } 45%, 80% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -100; } }
+@keyframes ci-bar { 0%, 100% { transform: scaleY(1); } 50% { transform: scaleY(.6); } }
+@keyframes ci-scan { 0%, 100% { transform: translate(0, 0); } 25% { transform: translate(-150px, 10px); } 50% { transform: translate(-120px, 50px); } 75% { transform: translate(-20px, 40px); } }
+@keyframes ci-pop { 0%, 55% { transform: scale(.85); opacity: .5; } 65% { transform: scale(1.12); opacity: 1; } 75%, 100% { transform: scale(1); opacity: 1; } }
+@keyframes ci-blink { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (max-width: 860px) {
+  .split-head { grid-template-columns: 1fr; }
+  .check-illu { justify-self: center; max-width: 320px; }
+}
+
+.group-title { font-family: var(--mono); font-size: .9375rem; font-weight: 500; letter-spacing: .04em; color: var(--navy); display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.group-title::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+
 /* Sanftes Einblenden beim Scrollen (nur mit JavaScript und ohne reduzierte Bewegung) */
 @media (prefers-reduced-motion: no-preference) {
   .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
