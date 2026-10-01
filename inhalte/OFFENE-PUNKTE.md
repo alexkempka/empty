@@ -6,10 +6,8 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 
 | # | Punkt | Warum |
 |---|---|---|
-| 1 | **Auftragsverarbeitungsvertrag (AVV) mit IONOS** prüfen bzw. im IONOS-Kundenbereich abschließen | Pflicht nach Art. 28 DSGVO; erst danach Satz in der Datenschutzerklärung ergänzen |
 | 2 | **Logo-Lizenz:** Bei welchem Dienst wurde das Logo gekauft? Rechnung/Lizenzbedingungen ablegen | Dokumentation der Nutzungsrechte (`gestaltung/LIZENZEN.md`) |
 | 3 | Nennung des Neffen (Logo-Animation) – nur mit dessen Einverständnis | Personenbezogene Angabe |
-| 4 | **SFTP-Zugang** bei IONOS anlegen (eigener Benutzer, nicht das Hauptpasswort) | Für Sicherung und Upload |
 
 ## Vor dem Deployment zu prüfen (mit IONOS-Zugang)
 
@@ -32,6 +30,9 @@ Stand: 01.10.2026. Die Website ist fertig programmiert und lokal getestet. Diese
 Impressum und Datenschutzerklärung vor der Veröffentlichung juristisch prüfen lassen.
 
 ## Erledigt
+
+- AV-Vertrag mit IONOS abgeschlossen (laut Inhaber, 01.10.2026) – in Datenschutzerklärung DE/EN eingetragen
+- SFTP-Benutzer bei IONOS angelegt (laut Inhaber)
 
 - Anschrift der Aufsichtsbehörde aktualisiert: Wilhelmstraße 7, 65185 Wiesbaden (Umzug am 16.03.2026,
   laut Pressemitteilung des HBDI)
